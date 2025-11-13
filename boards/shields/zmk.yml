@@ -1,0 +1,32 @@
+# --- Configurações de energia e desempenho ---
+power:
+  # Tempo de inatividade antes de entrar em sleep (em ms)
+  sleep_timeout: 15000  # 15s — pode reduzir pra 10s se quiser mais agressivo
+
+# --- Configurações Bluetooth ---
+bluetooth:
+  # Intervalo entre pacotes de advertising (em ms)
+  advertising_interval: 2000   # 2s = consumo bem menor
+  # Parâmetros da conexão BLE
+  connection_interval_min: 30  # 37.5ms
+  connection_interval_max: 80  # 100ms
+
+# --- Configurações da matriz de teclas ---
+scan:
+  # Intervalo entre varreduras da matriz (em ms)
+  period: 5  # padrão é 1ms — 5ms já reduz muito o consumo
+
+# --- Desativar recursos que drenam energia ---
+rgb_underglow:
+  enabled: false
+
+rgb_matrix:
+  enabled: false
+
+behavior_indicators:
+  enabled: false
+
+# --- (Opcional) Se você usa split, ajuste o comportamento do lado off ---
+split:
+  # Desliga completamente o lado sem host ativo
+  timeout: 10000  # 10s sem comunicação = sleep
